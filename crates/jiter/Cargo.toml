@@ -17,14 +17,12 @@ num-bigint = { version = "0.4.4", optional = true }
 num-traits = "0.2.16"
 ahash = "0.8.0"
 smallvec = "1.11.0"
-pyo3 = { workspace = true, optional = true }
 lexical-parse-float = { version = "1.0.5", features = ["format"] }
 bitvec = "1.0.1"
 
 [features]
 default = ["num-bigint"]
-python = ["dep:pyo3", "dep:pyo3-build-config"]
-num-bigint = ["dep:num-bigint", "pyo3?/num-bigint"]
+num-bigint = ["dep:num-bigint"]
 
 [dev-dependencies]
 paste = "1.0.7"
